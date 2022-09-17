@@ -4,8 +4,10 @@ const http = require("http");
 const fs = require("fs");
 const readline = require("minimist");
 
+const port=process.env.PORT || 3000;
+
 const args = require("minimist")(process.argv.slice(2));
-let port = args.port;
+//let port = args.port;
 
 let projectContent = "";
 let homeContent = "";
@@ -109,5 +111,5 @@ const server = http.createServer((req, res) => {
 });
 
 server.listen(port, "127.0.0.1", () => {
-    console.log(`litening at port ${port}`);
+    console.log('server is listen port on ${port}')
 });
