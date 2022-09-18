@@ -1,13 +1,12 @@
-
-
 const http = require("http");
 const fs = require("fs");
 const readline = require("minimist");
 
-const port=process.env.PORT || 3000;
+//const port = process.env.PORT || 5000;
 
-const args = require("minimist")(process.argv.slice(2));
-//let port = args.port;
+const args = require("minimist")
+(process.argv.slice(2));
+let port = args.port;
 
 let projectContent = "";
 let homeContent = "";
